@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "01b7a87b7426018e1fc6ef9e007f581a",
+    "content-hash": "d9441aa7c1a69987dfc1790c165add0d",
     "packages": [
         {
             "name": "bulton-fr/bfw",
@@ -65,6 +65,55 @@
                 "php"
             ],
             "time": "2016-05-29T00:00:00+00:00"
+        },
+        {
+            "name": "bulton-fr/bfw-api",
+            "version": "2.0.0-rc.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bulton-fr/bfw-api.git",
+                "reference": "bddbd0f87c2e0835590377d3ab0d162fc7398041"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bulton-fr/bfw-api/zipball/bddbd0f87c2e0835590377d3ab0d162fc7398041",
+                "reference": "bddbd0f87c2e0835590377d3ab0d162fc7398041",
+                "shasum": ""
+            },
+            "require": {
+                "bulton-fr/bfw": "3.0.0-rc.5",
+                "bulton-fr/php-to-xml": "1.0.0",
+                "nikic/fast-route": "v0.7.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "atoum/atoum": "~2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BfwApi\\": "src/class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@bulton.fr",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "API module for BFW",
+            "homepage": "https://github.com/bulton-fr/bfw-api",
+            "keywords": [
+                "api",
+                "bfw",
+                "module"
+            ],
+            "time": "2016-10-23T00:00:00+00:00"
         },
         {
             "name": "bulton-fr/bfw-controller",
@@ -251,6 +300,50 @@
             "time": "2016-06-19T00:00:00+00:00"
         },
         {
+            "name": "bulton-fr/php-to-xml",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bulton-fr/php-to-xml.git",
+                "reference": "3d19060a7f7a1884db4b5f1ba0d45dae213529a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bulton-fr/php-to-xml/zipball/3d19060a7f7a1884db4b5f1ba0d45dae213529a3",
+                "reference": "3d19060a7f7a1884db4b5f1ba0d45dae213529a3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "atoum/atoum": "~2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "bultonFr\\PhpToXml\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@bulton.fr",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "Convert php structure to xml file",
+            "homepage": "https://github.com/bulton-fr/php-to-xml",
+            "keywords": [
+                "xml"
+            ],
+            "time": "2016-10-23T00:00:00+00:00"
+        },
+        {
             "name": "fenom/fenom",
             "version": "2.11.8",
             "source": {
@@ -351,7 +444,8 @@
         "bulton-fr/bfw": 5,
         "bulton-fr/bfw-controller": 5,
         "bulton-fr/bfw-fastroute": 5,
-        "bulton-fr/bfw-fenom": 5
+        "bulton-fr/bfw-fenom": 5,
+        "bulton-fr/bfw-api": 5
     },
     "prefer-stable": false,
     "prefer-lowest": false,
