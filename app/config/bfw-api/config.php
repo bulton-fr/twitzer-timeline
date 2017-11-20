@@ -11,7 +11,7 @@ return (object) [
      * @var string $urlPrefix : Prefix url to use for all api url
      * @example '/api' for have an api url /api/books/
      */
-    'urlPrefix' => '',
+    'urlPrefix' => '/api',
     
     /**
      * @var boolean $useRest : To use REST api mode

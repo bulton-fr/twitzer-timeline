@@ -11,7 +11,7 @@ return [
     /**
      * @var boolean debug : Debug mode
      */
-    'debug'              => false,
+    'debug'              => true,
     
     /**
      * @var array errorRenderFct : Function use to display a personnal
@@ -21,7 +21,7 @@ return [
         /**
          * @var boolean enabled : To enable the error render
          */
-        'enabled'  => false,
+        'enabled'  => true,
         /**
          * @var array default : For the no cli mode
          */
@@ -60,7 +60,7 @@ return [
         /**
          * @var boolean enabled : To enable the exception render
          */
-        'enabled'  => false,
+        'enabled'  => true,
         /**
          * @var array default : For the no cli mode
          */
@@ -199,11 +199,11 @@ return [
             /**
              * @var string name : Module's name
              */
-            'name'    => '',
+            'name'    => 'bfw-controller',
             /**
              * @var boolean enabled : If the module is enable or not
              */
-            'enabled' => false
+            'enabled' => true
         ],
         
         /**
@@ -213,11 +213,11 @@ return [
             /**
              * @var string name : Module's name
              */
-            'name'    => '',
+            'name'    => 'bfw-fastroute',
             /**
              * @var boolean enabled : If the module is enable or not
              */
-            'enabled' => false
+            'enabled' => true
         ],
         
         /**
@@ -227,11 +227,11 @@ return [
             /**
              * @var string name : Module's name
              */
-            'name'    => '',
+            'name'    => 'bfw-fenom',
             /**
              * @var boolean enabled : If the module is enable or not
              */
-            'enabled' => false
+            'enabled' => true
         ]
     ]
 ];

@@ -11,5 +11,5 @@ return [
     /**
      * @var boolean useClass : If controller use php class or procedural file
      */
-    'useClass' => false
+    'useClass' => true
 ];

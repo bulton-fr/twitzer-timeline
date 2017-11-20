@@ -33,5 +33,12 @@
  */
 
 return (object) [
-    'routes' => []
+    'routes' => [
+        '/' => [
+            'target' => (object) [
+                'class'  => '\Controller\Home',
+                'method' => 'index'
+            ]
+        ]
+    ]
 ];
