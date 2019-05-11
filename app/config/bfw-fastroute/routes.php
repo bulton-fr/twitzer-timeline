@@ -15,7 +15,7 @@
  * 
  * Exemple if target contains php file to call
  *
- * return (object) [
+ * return [
  *     'routes' => [
  *         '/' => [
  *             'target' => 'index.php'
@@ -32,13 +32,10 @@
  * ];
  */
 
-return (object) [
+return [
     'routes' => [
         '/' => [
-            'target' => (object) [
-                'class'  => '\Controller\Home',
-                'method' => 'index'
-            ]
+            'target' => ['\Controller\Home', 'index']
         ]
     ]
 ];

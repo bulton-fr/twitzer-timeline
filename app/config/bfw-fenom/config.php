@@ -20,7 +20,10 @@ $fenomOptionsDebug = [
     'auto_reload' => true
 ];
 
-$debugStatus = \BFW\Application::getInstance()->getConfig()->getValue('debug');
+$debugStatus = \BFW\Application::getInstance()
+    ->getConfig()
+    ->getValue('debug', 'global.php')
+;
 if ($debugStatus === true) {
     $fenomOptions = array_merge($fenomOptions, $fenomOptionsDebug);
 }
@@ -33,9 +36,9 @@ return [
      * @var string pathTemplate : Directory where is template files from root
      *  project directory.
      * 
-     * @suggest: '/src/view/templates'
+     * @suggest: VIEW_DIR.'/templates/src',
      */
-    'pathTemplate' => '/src/view/templates',
+    'pathTemplate' => VIEW_DIR.'/templates/src',
     
     /**
      * @var string pathCompiled : Directory where is save compiled template
@@ -45,9 +48,9 @@ return [
      * Fenom default value is /tmp
      * You can disabled compiled template with option "disable_cache".
      * 
-     * @suggest: '/src/view/compiled/templates'
+     * @suggest: VIEW_DIR.'/templates/compiled',
      */
-    'pathCompiled' => '/src/view/compiled/templates',
+    'pathCompiled' => '/tmp/fenom-compile',
     
     /**
      * @var array fenomOptions : All options passed to Fenom

@@ -1,9 +1,9 @@
 {
     "require": {
-        "bulton-fr/bfw": "3.0.0-RC5",
-        "bulton-fr/bfw-controller": "3.0.0-RC5",
-        "bulton-fr/bfw-fastroute": "2.0.0-RC5",
-        "bulton-fr/bfw-fenom": "2.0.0-RC5",
-        "bulton-fr/bfw-api": "2.0.0-RC5"
+        "bulton-fr/bfw": "3.0.0-RC10",
+        "bulton-fr/bfw-controller": "3.0.0-RC10",
+        "bulton-fr/bfw-fastroute": "2.0.0-RC10",
+        "bulton-fr/bfw-fenom": "2.0.0-RC10",
+        "bulton-fr/bfw-api": "2.0.0-RC10"
     }
 }

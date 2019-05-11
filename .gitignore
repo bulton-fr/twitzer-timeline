@@ -1,2 +1,6 @@
 vendor
 node_modules
+app/modules/bfw-api
+app/modules/bfw-controller
+app/modules/bfw-fastroute
+app/modules/bfw-fenom

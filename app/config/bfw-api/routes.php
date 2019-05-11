@@ -15,7 +15,7 @@
  * 
  * Exemple if target contains php file to call
  *
- * return (object) [
+ * return [
  *     'routes' => [
  *         '/books' => [
  *             'className'  => 'Books',
@@ -36,6 +36,19 @@
  * ];
  */
 
-return (object) [
-    'routes' => []
+return [
+    'routes' => [
+        '/tweet-list/{username}/{sinceId:\d+}' => [
+            'className'  => '\Api\TweetList',
+            'httpMethod' => ['GET']
+        ],
+        '/tweet/{username}/{id}' => [
+            'className'  => '\Api\Tweet',
+            'httpMethod' => ['GET']
+        ],
+        '/cache' => [
+            'className'  => '\Api\Cache',
+            'httpMethod' => ['POST']
+        ]
+    ]
 ];
