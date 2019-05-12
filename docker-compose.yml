@@ -16,4 +16,4 @@ services:
     ports:
       - ${EXTERNAL_PORT}:80
     
-    command: /opt/start_project.sh
+    command: sudo /opt/start_project.sh
