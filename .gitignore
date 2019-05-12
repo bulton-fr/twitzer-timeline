@@ -4,3 +4,5 @@ app/modules/bfw-api
 app/modules/bfw-controller
 app/modules/bfw-fastroute
 app/modules/bfw-fenom
+web/assets/css/*.css
+web/assets/js/*.js

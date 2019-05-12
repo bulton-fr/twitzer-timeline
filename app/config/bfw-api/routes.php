@@ -42,10 +42,6 @@ return [
             'className'  => '\Api\TweetList',
             'httpMethod' => ['GET']
         ],
-        '/tweet/{username}/{id}' => [
-            'className'  => '\Api\Tweet',
-            'httpMethod' => ['GET']
-        ],
         '/cache' => [
             'className'  => '\Api\Cache',
             'httpMethod' => ['POST']

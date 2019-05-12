@@ -38,7 +38,7 @@ return [
      * 
      * @suggest: VIEW_DIR.'/templates/src',
      */
-    'pathTemplate' => VIEW_DIR.'/templates/src',
+    'pathTemplate' => VIEW_DIR.'templates',
     
     /**
      * @var string pathCompiled : Directory where is save compiled template

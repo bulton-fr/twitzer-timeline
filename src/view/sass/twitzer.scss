@@ -1,0 +1,29 @@
+.twitzer {
+    &-header {
+        &-textfield {
+            &__input {
+                border-bottom-color: white;
+            }
+            &__label {
+                color: inherit;
+            }
+        }
+    }
+    
+    &__card {
+        &--empty {
+            min-height: 60px;
+        }
+        &__btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            opacity: 0.5;
+            z-index: 10;
+            
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
