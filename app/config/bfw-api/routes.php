@@ -45,6 +45,10 @@ return [
         '/cache' => [
             'className'  => '\Api\Cache',
             'httpMethod' => ['POST']
+        ],
+        '/pubKeyValidate' => [
+            'className'  => '\Api\PubKeyValidate',
+            'httpMethod' => ['POST']
         ]
     ]
 ];

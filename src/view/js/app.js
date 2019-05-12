@@ -2,12 +2,15 @@ const app = (function() {
     let formInfos,
         inputUsername,
         inputSinceId,
-        listTweet;
+        listTweet,
+        isAuth = false,
+        authDialog;
     
     function init() {
         formInfos     = document.querySelector("#formInfos");
         inputUsername = document.querySelector("#twitterUser");
         inputSinceId  = document.querySelector("#sinceTweetId");
+        authDialog    = document.querySelector('#authDialog')
         listTweet     = document.querySelector("#listTweet");
         
         document.querySelector('.mdl-layout__content').addEventListener('scroll', function(e) {
@@ -15,7 +18,80 @@ const app = (function() {
         });
         
         formInfos.addEventListener('submit', formSubmit);
-    };
+
+        initAuthDialog();
+        validatePubKeyFromStorage();
+    }
+
+    function initAuthDialog() {
+        let authBtn = document.querySelector('#openAuthDialog');
+
+        if (authDialog.showModal === false) {
+            dialogPolyfill.registerDialog(authDialog);
+        }
+        
+        authBtn.addEventListener('click', openAuthDialog);
+        authDialog.querySelector('#authValidate').addEventListener('click', validatePubKeyFromPost);
+    }
+
+    function openAuthDialog() {
+        authDialog.showModal();
+    }
+
+    function validatePubKeyFromPost() {
+        let pubKey = authDialog.querySelector('#pubKeyValue').value;
+        if (pubKey === '') {
+            return;
+        }
+
+        validatePubKey(pubKey);
+    }
+
+    function validatePubKeyFromStorage() {
+        let pubKey = localStorage.getItem('pubKey');
+        if (pubKey === null) {
+            return;
+        }
+
+        validatePubKey(pubKey);
+    }
+
+    function validatePubKey(pubKeyValue) {
+        let url = '/api/pubKeyValidate';
+        
+        const ajax = new Utils_Ajax(
+            url,
+            {
+                success: function(xhr) {
+                    pubKeyValidate(xhr, pubKeyValue);
+                },
+                error: pubKeyError
+            },
+            'POST'
+        );
+
+        ajax.setRequestHeader('Content-Type', 'application/json');
+        ajax.setRequestHeader('Accept', 'application/json');
+        
+        ajax.run(JSON.stringify({
+            pubKey: pubKeyValue
+        }));
+    }
+
+    function pubKeyValidate(xhr, pubKeyValue) {
+        isAuth = true;
+
+        localStorage.setItem("pubKey", pubKeyValue);
+
+        document.querySelector('#updateTweetList').removeAttribute('disabled');
+        document.querySelector('#openAuthDialog').setAttribute('disabled', 'disabled');
+
+        authDialog.close();
+    }
+
+    function pubKeyError(xhr) {
+        document.querySelector('#authError').innerHTML = 'The pubKey is not allowed.';
+    }
     
     function formSubmit(event) {
         event.preventDefault();
