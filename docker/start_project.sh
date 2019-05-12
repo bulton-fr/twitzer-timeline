@@ -2,11 +2,17 @@
 
 echo 'Execute start_project.sh'
 
-echo -n 'Disable apache2 vhost 000-default.conf ... '
+echo 'Disable apache2 vhost 000-default.conf'
 if [ -f /etc/apache2/sites-enabled/000-default.conf ]; then
     sudo a2dissite 000-default.conf
 fi
-echo 'Done'
+
+echo 'Enable apache2 vhost'
+if [ -f /opt/certs/cert.pem ]; then
+    sudo a2ensite https-twitzer-timeline.conf
+else
+    sudo a2ensite http-twitzer-timeline.conf
+fi
 
 echo 'Execute composer'
 if [ -d /var/www/html/vendor ]; then

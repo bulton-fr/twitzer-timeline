@@ -8,10 +8,12 @@ services:
 
     volumes:
       - .:/var/www/html
-      - ./docker/apache-vhost.conf:/etc/apache2/sites-enabled/twiter-timeline.conf
+      - ./docker/apache-vhost-http.conf:/etc/apache2/sites-available/http-twitzer-timeline.conf
+      - ./docker/apache-vhost-https.conf:/etc/apache2/sites-available/https-twitzer-timeline.conf
       - ./docker/start_project.sh:/opt/start_project.sh
+      - ${SSL_CERTS_PATH}:/opt/certs
 
     ports:
-      - 50021:80
+      - ${EXTERNAL_PORT}:80
     
     command: /opt/start_project.sh
