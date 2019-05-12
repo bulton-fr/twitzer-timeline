@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  app:
+    image: thecodingmachine/php:7.3-v2-apache-node10
+    environment:
+        PHP_EXTENSION_XDEBUG: 1
+
+    volumes:
+      - .:/var/www/html
+      - ./docker/apache-vhost.conf:/etc/apache2/sites-enabled/twiter-timeline.conf
+      - ./docker/start_project.sh:/opt/start_project.sh
+
+    ports:
+      - 50021:80
+    
+    command: /opt/start_project.sh
