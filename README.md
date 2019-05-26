@@ -1,4 +1,4 @@
-# Twitter cleaned timeline
+# Twitter cleaned timeline
 
 It's an interface without :
 
@@ -11,9 +11,9 @@ The interface kept where you are into your reading, and display tweet from the l
 
 It's protected by a system who ask you a key (saved in localstorage to not ask it each time).
 
-# Configuration
+## Configuration
 
-## Application
+### Application
 
 It's a [bfw](https://www.github.com/bfw-systems/bfw) application, so all config files are into `/app/configs`.
 
@@ -24,7 +24,7 @@ The file can have the name you want, all public keys are readed during authentif
 If you don't want rewrite the twitter username, you need to add it to `/app/cache/twitzer.json`.
 This is a change I need to do some day.
 
-## Docker
+### Docker
 
 There are a `.env.default` used by docker-compose.
 Rename it to `.env` and change values :
@@ -32,12 +32,12 @@ Rename it to `.env` and change values :
 * `EXTERNAL_PORT` : External port used to forward the port 80.
 * `SSL_CERTS_PATH` : If you use https, the path (on the host) to the file used by https (`cert.pem`, `privkey.pem`, `chain.pem`).
 
-# Installation
+## Installation
 
 Just git clone the repository, and exec `docker-compose up -d`.  
 If you want have a https for the application, use `docker-compose -f docker-compose.yml -f docker-compose.https.yml up -d`.
 
-# Use the application
+## Use the application
 
 In the top-right, you have many fields.
 
