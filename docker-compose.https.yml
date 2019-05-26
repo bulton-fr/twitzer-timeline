@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+  app:
+    volumes:
+      - ${SSL_CERTS_PATH}/cert.pem:/opt/certs/cert.pem
+      - ${SSL_CERTS_PATH}/privkey.pem:/opt/certs/privkey.pem
+      - ${SSL_CERTS_PATH}/chain.pem:/opt/certs/chain.pem

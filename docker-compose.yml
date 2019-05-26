@@ -13,9 +13,6 @@ services:
       - ./docker/apache-vhost-http.conf:/etc/apache2/sites-available/http-twitzer-timeline.conf
       - ./docker/apache-vhost-https.conf:/etc/apache2/sites-available/https-twitzer-timeline.conf
       - ./docker/start_project.sh:/opt/start_project.sh
-      - ${SSL_CERTS_PATH}/cert.pem:/opt/certs/cert.pem
-      - ${SSL_CERTS_PATH}/privkey.pem:/opt/certs/privkey.pem
-      - ${SSL_CERTS_PATH}/chain.pem:/opt/certs/chain.pem
 
     ports:
       - ${EXTERNAL_PORT}:80
