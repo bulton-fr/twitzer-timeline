@@ -1,0 +1,22 @@
+version: "2"
+
+services:
+  app:
+    image: thecodingmachine/php:7.3-v2-apache-node10
+    environment:
+        PHP_EXTENSION_XDEBUG: 1
+        APACHE_EXTENSION_SOCACHE_SHMCB: 1
+        APACHE_EXTENSION_SSL: 1
+
+    volumes:
+      - .:/var/www/html
+      - ./docker/apache-vhost-http.conf:/etc/apache2/sites-available/http-twitzer-timeline.conf
+      - ./docker/apache-vhost-https.conf:/etc/apache2/sites-available/https-twitzer-timeline.conf
+      - ./docker/start_project.sh:/opt/start_project.sh
+
+    ports:
+      - ${EXTERNAL_PORT}:80
+    
+    restart: unless-stopped
+    
+    command: sudo /opt/start_project.sh

@@ -1,0 +1,726 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "470a04500a1f3db311758712f35b3936",
+    "packages": [
+        {
+            "name": "bulton-fr/bfw",
+            "version": "3.0.0-rc.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bfw-systems/bfw.git",
+                "reference": "2f6977112d6526f2ad1410b7c010f7fba33ea851"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bfw-systems/bfw/zipball/2f6977112d6526f2ad1410b7c010f7fba33ea851",
+                "reference": "2f6977112d6526f2ad1410b7c010f7fba33ea851",
+                "shasum": ""
+            },
+            "require": {
+                "bulton-fr/dependency-tree": "@stable",
+                "bulton-fr/utils": "~1.0",
+                "monolog/monolog": "~1.0",
+                "php": "^7.0.0"
+            },
+            "require-dev": {
+                "atoum/atoum": "~3.1",
+                "atoum/visibility-extension": "~1.3",
+                "pulse00/monolog-parser": "0.0.3"
+            },
+            "suggest": {
+                "bulton-fr/bfw-api": "API module for the framework",
+                "bulton-fr/bfw-controller": "Controller module for the framework",
+                "bulton-fr/bfw-fastroute": "Router module for the framework who use fastroute lib",
+                "bulton-fr/bfw-fenom": "Template module for the framework who use fenom",
+                "bulton-fr/bfw-sql": "Queries systems module for the framework",
+                "ext-memcached": "To save datas into your memory and be faster to access it"
+            },
+            "bin": [
+                "bin/bfwInstall",
+                "bin/bfwAddMod",
+                "bin/bfwDelMod",
+                "bin/bfwDisMod",
+                "bin/bfwEnMod"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BFW\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@gmail.com",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "Framework PHP",
+            "homepage": "https://github.com/bfw-systems/bfw",
+            "keywords": [
+                "framework",
+                "php"
+            ],
+            "time": "2016-05-29T00:00:00+00:00"
+        },
+        {
+            "name": "bulton-fr/bfw-api",
+            "version": "2.0.0-rc.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bfw-systems/api.git",
+                "reference": "3dff232b320453d7cea88fc789a0ae7f6cd88bff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bfw-systems/api/zipball/3dff232b320453d7cea88fc789a0ae7f6cd88bff",
+                "reference": "3dff232b320453d7cea88fc789a0ae7f6cd88bff",
+                "shasum": ""
+            },
+            "require": {
+                "bulton-fr/bfw": "~3.0.0-RC11@RC",
+                "bulton-fr/php-to-xml": "1.0.0",
+                "nikic/fast-route": "~v1.3"
+            },
+            "require-dev": {
+                "atoum/atoum": "~3.1",
+                "atoum/visibility-extension": "~1.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BfwApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@bulton.fr",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "API module for BFW",
+            "homepage": "https://github.com/bulton-fr/bfw-api",
+            "keywords": [
+                "api",
+                "bfw",
+                "module"
+            ],
+            "time": "2016-10-23T00:00:00+00:00"
+        },
+        {
+            "name": "bulton-fr/bfw-controller",
+            "version": "3.0.0-rc.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bfw-systems/controller.git",
+                "reference": "87cd7cb29e68fc7edc528b4daf2ba9bb95b8dc86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bfw-systems/controller/zipball/87cd7cb29e68fc7edc528b4daf2ba9bb95b8dc86",
+                "reference": "87cd7cb29e68fc7edc528b4daf2ba9bb95b8dc86",
+                "shasum": ""
+            },
+            "require": {
+                "bulton-fr/bfw": "~3.0.0-RC11@RC"
+            },
+            "require-dev": {
+                "atoum/atoum": "~3.1",
+                "atoum/visibility-extension": "~1.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BfwController\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@bulton.fr",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "Controllers module for BFW",
+            "homepage": "https://github.com/bulton-fr/bfw-controller",
+            "keywords": [
+                "bfw",
+                "controller",
+                "module"
+            ],
+            "time": "2016-10-08T00:00:00+00:00"
+        },
+        {
+            "name": "bulton-fr/bfw-fastroute",
+            "version": "2.0.0-rc.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bfw-systems/fastroute.git",
+                "reference": "cd902fb7e3e5e4c9bbaf7cf8d60244eeeb519fe2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bfw-systems/fastroute/zipball/cd902fb7e3e5e4c9bbaf7cf8d60244eeeb519fe2",
+                "reference": "cd902fb7e3e5e4c9bbaf7cf8d60244eeeb519fe2",
+                "shasum": ""
+            },
+            "require": {
+                "bulton-fr/bfw": "~3.0.0-RC11@RC",
+                "nikic/fast-route": "~v1.3"
+            },
+            "require-dev": {
+                "atoum/atoum": "~3.1",
+                "atoum/visibility-extension": "~1.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BfwFastRoute\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@bulton.fr",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "Router module for BFW",
+            "homepage": "https://github.com/bulton-fr/bfw-fastroute",
+            "keywords": [
+                "bfw",
+                "module",
+                "router"
+            ],
+            "time": "2016-10-13T00:00:00+00:00"
+        },
+        {
+            "name": "bulton-fr/bfw-fenom",
+            "version": "2.0.0-rc.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bfw-systems/fenom.git",
+                "reference": "bb260ae17f34affa526fb69c8fb670f6be8d8f27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bfw-systems/fenom/zipball/bb260ae17f34affa526fb69c8fb670f6be8d8f27",
+                "reference": "bb260ae17f34affa526fb69c8fb670f6be8d8f27",
+                "shasum": ""
+            },
+            "require": {
+                "bulton-fr/bfw": "~3.0.0-RC11@RC",
+                "fenom/fenom": "~2.8"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@bulton.fr",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "Fenom template module for BFW",
+            "homepage": "https://github.com/bulton-fr/bfw-fenom",
+            "keywords": [
+                "bfw",
+                "fenom",
+                "module",
+                "template"
+            ],
+            "time": "2016-03-26T00:00:00+00:00"
+        },
+        {
+            "name": "bulton-fr/call-curl",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bulton-fr/call-curl.git",
+                "reference": "743fc969a5fb21da68c6f84144b74e58fad2b527"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bulton-fr/call-curl/zipball/743fc969a5fb21da68c6f84144b74e58fad2b527",
+                "reference": "743fc969a5fb21da68c6f84144b74e58fad2b527",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "@stable",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "atoum/atoum": "~2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "bultonFr\\CallCurl\\": [
+                        "src/class",
+                        "src/interfaces"
+                    ],
+                    "bultonFr\\CallCurl\\Parser\\": "src/parser"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@bulton.fr",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "Lib to simply use curl with PHP",
+            "homepage": "https://github.com/bulton-fr/CallCurl",
+            "keywords": [
+                "curl",
+                "php"
+            ],
+            "time": "2016-06-10T00:00:00+00:00"
+        },
+        {
+            "name": "bulton-fr/dependency-tree",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bulton-fr/dependency-tree.git",
+                "reference": "2e772fc7ee23326e3aedcacd2e84fe26686f745f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bulton-fr/dependency-tree/zipball/2e772fc7ee23326e3aedcacd2e84fe26686f745f",
+                "reference": "2e772fc7ee23326e3aedcacd2e84fe26686f745f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "atoum/atoum": "~3.1",
+                "atoum/visibility-extension": "~1.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "bultonFr\\DependencyTree\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@gmail.com",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "Lib to generate a tree of dependencies with PHP",
+            "homepage": "https://github.com/bulton-fr/dependency-tree",
+            "keywords": [
+                "dependency tree",
+                "php"
+            ],
+            "time": "2016-06-19T00:00:00+00:00"
+        },
+        {
+            "name": "bulton-fr/php-to-xml",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bulton-fr/php-to-xml.git",
+                "reference": "3d19060a7f7a1884db4b5f1ba0d45dae213529a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bulton-fr/php-to-xml/zipball/3d19060a7f7a1884db4b5f1ba0d45dae213529a3",
+                "reference": "3d19060a7f7a1884db4b5f1ba0d45dae213529a3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "atoum/atoum": "~2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "bultonFr\\PhpToXml\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@bulton.fr",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "Convert php structure to xml file",
+            "homepage": "https://github.com/bulton-fr/php-to-xml",
+            "keywords": [
+                "xml"
+            ],
+            "time": "2016-10-23T00:00:00+00:00"
+        },
+        {
+            "name": "bulton-fr/utils",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bulton-fr/php-utils.git",
+                "reference": "c4ec56d55b8713f1214a1b1255a2b2d481e7af83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bulton-fr/php-utils/zipball/c4ec56d55b8713f1214a1b1255a2b2d481e7af83",
+                "reference": "c4ec56d55b8713f1214a1b1255a2b2d481e7af83",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.0"
+            },
+            "require-dev": {
+                "atoum/atoum": "~3.3",
+                "atoum/visibility-extension": "~1.3",
+                "monolog/monolog": "~1.24",
+                "scrutinizer/ocular": "~1.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "bultonFr\\Utils\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@gmail.com",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "Some utils classes",
+            "homepage": "https://github.com/bulton-fr/php-utils",
+            "time": "2019-05-10T00:00:00+00:00"
+        },
+        {
+            "name": "fenom/fenom",
+            "version": "2.11.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fenom-template/fenom.git",
+                "reference": "9a1e56d16454a23c5c7353913625ee79543f9bac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fenom-template/fenom/zipball/9a1e56d16454a23c5c7353913625ee79543f9bac",
+                "reference": "9a1e56d16454a23c5c7353913625ee79543f9bac",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "<6.0",
+                "satooshi/php-coveralls": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Fenom\\": "src/"
+                },
+                "classmap": [
+                    "src/Fenom.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Shalganov",
+                    "email": "a.cobest@gmail.com"
+                }
+            ],
+            "description": "Fenom - excellent template engine for PHP",
+            "keywords": [
+                "fenom",
+                "template",
+                "templater",
+                "templating"
+            ],
+            "time": "2018-03-28T09:36:06+00:00"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.24.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "sentry/sentry": "^0.13",
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "sentry/sentry": "Allow sending log messages to a Sentry server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2018-11-05T09:00:11+00:00"
+        },
+        {
+            "name": "nikic/fast-route",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "181d480e08d9476e61381e04a71b34dc0432e812"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/181d480e08d9476e61381e04a71b34dc0432e812",
+                "reference": "181d480e08d9476e61381e04a71b34dc0432e812",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35|~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
+                }
+            ],
+            "description": "Fast request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "time": "2018-02-13T20:26:39+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2018-11-20T15:27:04+00:00"
+        },
+        {
+            "name": "ricardoper/twitteroauth",
+            "version": "v2.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ricardoper/TwitterOAuth.git",
+                "reference": "cbdd43db781f30a4f291b15b90ab08a30108d5d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ricardoper/TwitterOAuth/zipball/cbdd43db781f30a4f291b15b90ab08a30108d5d6",
+                "reference": "cbdd43db781f30a4f291b15b90ab08a30108d5d6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "lib-curl": "*",
+                "lib-openssl": "*",
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TwitterOAuth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ricardo Pereira",
+                    "email": "github@ricardopereira.es",
+                    "homepage": "http://ricardopereira.es"
+                }
+            ],
+            "description": "PHP library to communicate with Twitter OAuth API version 1.1",
+            "homepage": "https://github.com/ricardoper",
+            "keywords": [
+                "API v1.1",
+                "oauth",
+                "php",
+                "twitter"
+            ],
+            "time": "2016-05-27T19:06:33+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "bulton-fr/bfw": 5,
+        "bulton-fr/bfw-controller": 5,
+        "bulton-fr/bfw-fastroute": 5,
+        "bulton-fr/bfw-fenom": 5,
+        "bulton-fr/bfw-api": 5
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
