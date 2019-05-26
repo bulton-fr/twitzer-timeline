@@ -1,3 +1,7 @@
 {
-    "srcPath": "src/"
+    "srcPath": "src/",
+    "configPath": "config/",
+    "configFiles": [
+        "config.php"
+    ]
 }
