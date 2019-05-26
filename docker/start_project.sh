@@ -29,7 +29,8 @@ else
 fi
 
 echo 'BFW : Install all modules'
-cd /var/www/html && ./vendor/bin/bfwInstallModules
+cd /var/www/html && ./vendor/bin/bfwAddMod -a
+cd /var/www/html && ./vendor/bin/bfwEnMod -a
 
 echo 'Fenom : Create compiled directory'
 mkdir -p /tmp/fenom-compile
