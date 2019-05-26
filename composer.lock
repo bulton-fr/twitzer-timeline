@@ -4,30 +4,32 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0f6020a4e14df9ca70975bd58102c36",
+    "content-hash": "470a04500a1f3db311758712f35b3936",
     "packages": [
         {
             "name": "bulton-fr/bfw",
-            "version": "3.0.0-rc.10",
+            "version": "3.0.0-rc.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bfw-systems/bfw.git",
-                "reference": "050cef3a54a1bb89affa42a58b26b993da3a0145"
+                "reference": "2f6977112d6526f2ad1410b7c010f7fba33ea851"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bfw-systems/bfw/zipball/050cef3a54a1bb89affa42a58b26b993da3a0145",
-                "reference": "050cef3a54a1bb89affa42a58b26b993da3a0145",
+                "url": "https://api.github.com/repos/bfw-systems/bfw/zipball/2f6977112d6526f2ad1410b7c010f7fba33ea851",
+                "reference": "2f6977112d6526f2ad1410b7c010f7fba33ea851",
                 "shasum": ""
             },
             "require": {
                 "bulton-fr/dependency-tree": "@stable",
+                "bulton-fr/utils": "~1.0",
                 "monolog/monolog": "~1.0",
                 "php": "^7.0.0"
             },
             "require-dev": {
                 "atoum/atoum": "~3.1",
-                "atoum/visibility-extension": "~1.3"
+                "atoum/visibility-extension": "~1.3",
+                "pulse00/monolog-parser": "0.0.3"
             },
             "suggest": {
                 "bulton-fr/bfw-api": "API module for the framework",
@@ -39,7 +41,10 @@
             },
             "bin": [
                 "bin/bfwInstall",
-                "bin/bfwInstallModules"
+                "bin/bfwAddMod",
+                "bin/bfwDelMod",
+                "bin/bfwDisMod",
+                "bin/bfwEnMod"
             ],
             "type": "library",
             "autoload": {
@@ -59,7 +64,7 @@
                 }
             ],
             "description": "Framework PHP",
-            "homepage": "https://github.com/bulton-fr/bfw",
+            "homepage": "https://github.com/bfw-systems/bfw",
             "keywords": [
                 "framework",
                 "php"
@@ -68,23 +73,22 @@
         },
         {
             "name": "bulton-fr/bfw-api",
-            "version": "2.0.0-rc.10",
+            "version": "2.0.0-rc.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bfw-systems/api.git",
-                "reference": "c0b3f50fc7ed5794661347cd693174769690f8be"
+                "reference": "3dff232b320453d7cea88fc789a0ae7f6cd88bff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bfw-systems/api/zipball/c0b3f50fc7ed5794661347cd693174769690f8be",
-                "reference": "c0b3f50fc7ed5794661347cd693174769690f8be",
+                "url": "https://api.github.com/repos/bfw-systems/api/zipball/3dff232b320453d7cea88fc789a0ae7f6cd88bff",
+                "reference": "3dff232b320453d7cea88fc789a0ae7f6cd88bff",
                 "shasum": ""
             },
             "require": {
-                "bulton-fr/bfw": "3.0.0-rc.10",
+                "bulton-fr/bfw": "~3.0.0-RC11@RC",
                 "bulton-fr/php-to-xml": "1.0.0",
-                "nikic/fast-route": "~v1.3",
-                "php": "^7.0.0"
+                "nikic/fast-route": "~v1.3"
             },
             "require-dev": {
                 "atoum/atoum": "~3.1",
@@ -118,21 +122,20 @@
         },
         {
             "name": "bulton-fr/bfw-controller",
-            "version": "3.0.0-rc.10",
+            "version": "3.0.0-rc.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bfw-systems/controller.git",
-                "reference": "c22c497c14df54d8e8f10f653d2b37995d30c4c0"
+                "reference": "87cd7cb29e68fc7edc528b4daf2ba9bb95b8dc86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bfw-systems/controller/zipball/c22c497c14df54d8e8f10f653d2b37995d30c4c0",
-                "reference": "c22c497c14df54d8e8f10f653d2b37995d30c4c0",
+                "url": "https://api.github.com/repos/bfw-systems/controller/zipball/87cd7cb29e68fc7edc528b4daf2ba9bb95b8dc86",
+                "reference": "87cd7cb29e68fc7edc528b4daf2ba9bb95b8dc86",
                 "shasum": ""
             },
             "require": {
-                "bulton-fr/bfw": "3.0.0-rc.10",
-                "php": "^7.0.0"
+                "bulton-fr/bfw": "~3.0.0-RC11@RC"
             },
             "require-dev": {
                 "atoum/atoum": "~3.1",
@@ -166,22 +169,21 @@
         },
         {
             "name": "bulton-fr/bfw-fastroute",
-            "version": "2.0.0-rc.10",
+            "version": "2.0.0-rc.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bfw-systems/fastroute.git",
-                "reference": "2c5273b4b6d197f96a7c7d5a18e9b3c269a7889a"
+                "reference": "cd902fb7e3e5e4c9bbaf7cf8d60244eeeb519fe2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bfw-systems/fastroute/zipball/2c5273b4b6d197f96a7c7d5a18e9b3c269a7889a",
-                "reference": "2c5273b4b6d197f96a7c7d5a18e9b3c269a7889a",
+                "url": "https://api.github.com/repos/bfw-systems/fastroute/zipball/cd902fb7e3e5e4c9bbaf7cf8d60244eeeb519fe2",
+                "reference": "cd902fb7e3e5e4c9bbaf7cf8d60244eeeb519fe2",
                 "shasum": ""
             },
             "require": {
-                "bulton-fr/bfw": "3.0.0-rc.10",
-                "nikic/fast-route": "~v1.3",
-                "php": "^7.0.0"
+                "bulton-fr/bfw": "~3.0.0-RC11@RC",
+                "nikic/fast-route": "~v1.3"
             },
             "require-dev": {
                 "atoum/atoum": "~3.1",
@@ -215,22 +217,21 @@
         },
         {
             "name": "bulton-fr/bfw-fenom",
-            "version": "2.0.0-rc.10",
+            "version": "2.0.0-rc.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bfw-systems/fenom.git",
-                "reference": "663d036ec5aa79564224ca8ef6f678ef2c94bd8b"
+                "reference": "bb260ae17f34affa526fb69c8fb670f6be8d8f27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bfw-systems/fenom/zipball/663d036ec5aa79564224ca8ef6f678ef2c94bd8b",
-                "reference": "663d036ec5aa79564224ca8ef6f678ef2c94bd8b",
+                "url": "https://api.github.com/repos/bfw-systems/fenom/zipball/bb260ae17f34affa526fb69c8fb670f6be8d8f27",
+                "reference": "bb260ae17f34affa526fb69c8fb670f6be8d8f27",
                 "shasum": ""
             },
             "require": {
-                "bulton-fr/bfw": "3.0.0-rc.10",
-                "fenom/fenom": "~2.8",
-                "php": "^7.0.0"
+                "bulton-fr/bfw": "~3.0.0-RC11@RC",
+                "fenom/fenom": "~2.8"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -393,6 +394,50 @@
                 "xml"
             ],
             "time": "2016-10-23T00:00:00+00:00"
+        },
+        {
+            "name": "bulton-fr/utils",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bulton-fr/php-utils.git",
+                "reference": "c4ec56d55b8713f1214a1b1255a2b2d481e7af83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bulton-fr/php-utils/zipball/c4ec56d55b8713f1214a1b1255a2b2d481e7af83",
+                "reference": "c4ec56d55b8713f1214a1b1255a2b2d481e7af83",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.0"
+            },
+            "require-dev": {
+                "atoum/atoum": "~3.3",
+                "atoum/visibility-extension": "~1.3",
+                "monolog/monolog": "~1.24",
+                "scrutinizer/ocular": "~1.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "bultonFr\\Utils\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vermeulen Maxime / Bulton",
+                    "email": "bulton.fr@gmail.com",
+                    "homepage": "http://www.bulton.fr"
+                }
+            ],
+            "description": "Some utils classes",
+            "homepage": "https://github.com/bulton-fr/php-utils",
+            "time": "2019-05-10T00:00:00+00:00"
         },
         {
             "name": "fenom/fenom",

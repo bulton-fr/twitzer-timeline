@@ -1,8 +1,11 @@
 vendor
 node_modules
-app/modules/bfw-api
-app/modules/bfw-controller
-app/modules/bfw-fastroute
-app/modules/bfw-fenom
+app/config/PubKeyAuth/keys/dev.pub
+app/modules/available/bfw-api
+app/modules/available/bfw-controller
+app/modules/available/bfw-fastroute
+app/modules/available/bfw-fenom
+app/modules/enabled/*
+!app/modules/enabled/.gitkeep
 web/assets/css/*.css
 web/assets/js/*.js
