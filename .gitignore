@@ -9,3 +9,4 @@ app/modules/enabled/*
 !app/modules/enabled/.gitkeep
 web/assets/css/*.css
 web/assets/js/*.js
+.env
