@@ -70,12 +70,25 @@ const tweets = (function() {
             +'>'
                 +'<div class="mdl-card mdl-shadow--2dp twitzer__card twitzer__card--empty">'
                     +addMarkBtn(tweetInfos)
+                    +addRTBy(tweetInfos)
                     +'<div class="twitzer__card__content"></div>'
                 +'</div>'
             +'</div>'
         ;
         
         listTweet.innerHTML += html;
+    }
+
+    function addRTBy(tweetInfos) {
+        if (typeof tweetInfos.retweeted_status === 'undefined') {
+            return '';
+        }
+
+        return ''
+            +'<div class="twitzer__card__rt-by">'
+                +'<p>RT by @'+tweetInfos.user.screen_name+'</p>'
+            +'</div>'
+        ;
     }
 
     function addMarkBtn(tweetInfos) {
