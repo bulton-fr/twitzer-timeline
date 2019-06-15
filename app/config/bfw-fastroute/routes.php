@@ -36,6 +36,15 @@ return [
     'routes' => [
         '/' => [
             'target' => ['\Controllers\Home', 'index']
+        ],
+        '/save/saveLastTweets' => [
+            'target' => ['\Controllers\Save', 'saveLastTweets']
+        ],
+        '/save/list' => [
+            'target' => ['\Controllers\Save', 'list']
+        ],
+        '/save/read/{file}' => [
+            'target' => ['\Controllers\Save', 'read']
         ]
     ]
 ];

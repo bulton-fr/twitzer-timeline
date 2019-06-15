@@ -22,32 +22,11 @@ class Home extends \BfwController\Controller
     
     public function index()
     {
-        $twitzerInfos = $this->readCacheInfos();
-        $this->layout->addVar('infos', $twitzerInfos);
+        $twitzerInfo = new \Services\TwitzerInfo;
+        $this->layout->addVar('infos', $twitzerInfo->read());
+        $this->layout->addVar('headerRight', 'home/form-header.tpl');
+        $this->layout->addVar('pageName', 'home');
         
-        $this->layout->callLayout('index.tpl');
-    }
-    
-    protected function readCacheInfos()
-    {
-        $obj = (object) [
-            'username' => '',
-            'sinceId'  => ''
-        ];
-        
-        if (!file_exists(APP_DIR.'cache/twitzer.json')) {
-            return $obj;
-        }
-        
-        $json = json_decode(file_get_contents(APP_DIR.'cache/twitzer.json'));
-        
-        if (property_exists($json, 'username')) {
-            $obj->username = $json->username;
-        }
-        if (property_exists($json, 'sinceId')) {
-            $obj->sinceId = $json->sinceId;
-        }
-        
-        return $obj;
+        $this->layout->callLayout('home/index.tpl');
     }
 }
