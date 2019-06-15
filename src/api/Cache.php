@@ -14,13 +14,15 @@ class Cache extends \BfwApi\Rest
     public function postRequest()
     {
         $id = $this->datas['id'];
-        
-        $json = json_decode(file_get_contents(APP_DIR.'/cache/twitzer.json'));
-        $json->sinceId = $id;
-        
-        file_put_contents(
-            APP_DIR.'/cache/twitzer.json',
-            json_encode($json)
-        );
+
+        $twitzerInfo = new \Services\TwitzerInfo;
+        $status      = $twitzerInfo->updateSinceId($id);
+
+        if ($status === false) {
+            http_response_code(403);
+            return;
+        }
+
+        http_response_code(200);
     }
 }

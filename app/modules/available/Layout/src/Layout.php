@@ -78,7 +78,9 @@ class Layout
         
         $this->vars = [
             'baseUrl'      => $request->scheme.'://'.$request->host,
-            'useAdmLayout' => false
+            'useAdmLayout' => false,
+            'headerRight'  => null,
+            'pageName'     => null,
         ];
     }
     

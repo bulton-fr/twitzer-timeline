@@ -21,12 +21,9 @@ class TweetList extends \BfwApi\Rest
             return false;
         }
         
-        $app       = \BFW\Application::getInstance();
-        $listTweet = $app->getModuleList()->getModuleByName('Twitter')->twitter
-            ->setUsername($username)
-            ->getTweetSince($sinceId);
-        
-        $responseTweet = array_reverse($listTweet);
+        $tweetsList    = new \Services\TweetsList;
+        $responseTweet = $tweetsList->read($username, $sinceId);
+
         $this->sendResponse($responseTweet);
     }
 }
