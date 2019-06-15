@@ -34,6 +34,7 @@ function js() {
         'src/view/js/auth.js',
         'src/view/js/tweets.js',
         'src/view/js/home.js',
+        'src/view/js/saveRead.js',
         'src/view/js/app.js',
         'src/view/js/global.js',
     ])

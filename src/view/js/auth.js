@@ -84,7 +84,10 @@ const auth = (function() {
         isAuth = true;
 
         localStorage.setItem("pubKey", pubKeyValue);
-        home.enableInterface();
+
+        if (typeof app.getPage() !== 'undefined') {
+            app.getPage().enableInterface();
+        }
     }
     
     return {

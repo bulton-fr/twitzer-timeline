@@ -11,6 +11,12 @@ const tweets = (function() {
         });
     }
 
+    function initScroll() {
+        document.querySelector('.mdl-layout__content').addEventListener('scroll', function(e) {
+            fillAllTweets();
+        });
+    }
+
     function setAddMark(value) {
         addMark = value;
     }
@@ -166,6 +172,7 @@ const tweets = (function() {
 
     return {
         init,
+        initScroll,
         setAddMark,
         addFromJSON
     };
